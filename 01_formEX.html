@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_temp</title>
+</head>
+<body>
+    <form action="boardwrite" method="GET">
+        제목 :                             <!-- readonly : 작성할수없고 읽기만가능-->
+        <input type="text" name="btitle" value="제목입니다." readonly> <br>
+        작성자 :
+        <input type="text" name="bwriter" placeholder="작성자쓰세요"> <br>
+        비밀번호 :
+        <input type="password" name="bpassword"> <br>
+        내용 :
+        <textarea name="bcontents" rows="10" cols="20"></textarea> <br>
+        카테고리 :
+        <select value="bcategory">
+            <option selected>선택하세요</option>
+            <option value="study">공부</option>
+            <option value="travel">여행</option>
+            <option value="hobby">취미</option>
+        </select> <br>
+        전체공개여부 :
+        <input type="radio" id="yes" name="bopen" value="yes">
+        <label for="yes">예</label>
+        <input type="radio" id="no" name="bopen" value="no">
+        <label for="no">아니오</label> <br>
+
+        <input type="submit" value="작성완료">
+        <!-- form태그 내에 있는 button 태그는 submit의 역할을 함 -->
+        <button>글작성버튼</button>
+    </form>
+    http://127.0.0.1:5500/
+    boardwrite?
+    btitle=%EC%A0%9C%EB%AA%A9&
+    bwriter=%EC%9E%91%EC%84%B1%EC%9E%90&
+    bpassword=1234&
+    bcontents=%EB%82%B4%EC%9A%A9&
+    bopen=yes
+</body>
+</html>
