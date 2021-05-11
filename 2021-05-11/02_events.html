@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log('test1 함수호출');
+        }
+        function test2() {
+            console.log('test2 함수호출');
+            document.getElementById('id2').style.backgroundColor='red';
+        }
+        function test3() {
+            console.log('test3 함수호출');
+            document.getElementById('id3').style.color = 'red';
+        }
+        function test4() {
+            console.log('test4 함수호출');
+            document.getElementById('id3').style.color = 'blue';
+        }
+        function test5() {
+            console.log('test5 함수호출');
+            var ele = document.getElementById('id4');
+            ele.style.border = '5px red solid';
+        }
+        function test6() {
+            console.log('test6 함수호출');
+            var ele = document.getElementById('id4');
+            ele.style.border = '5px blue solid';
+        }
+    </script>
+    <style>
+        #id4{
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick : 클릭시 함수호출 -->
+    <p id="id1" onclick="test1()">내용1 클릭시</p>
+    <!-- ondblclick : 더블클릭시 함수호출 -->
+    <p id="id2" ondblclick="test2()">내용2 더블클릭시</p>
+    <!-- onmousedown : 마우스를 누르고 있을 때 함수호출
+         onmouseup : 누른 마우스를 뗄 때 함수호출 -->
+    <p id="id3" onmousedown="test3()" onmouseup="test4()">내용3 누르고 뗄 때</p>
+    <!-- onmouseover : 마우스로 올릴 때 함수호출
+         onmouseout : 마우스로 나갈 때 함수호출 -->
+    <div id="id4" onmouseover="test5()" onmouseout="test6()">
+        마우스를 들락날락
+    </div>
+</body>
+</html>

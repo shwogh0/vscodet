@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 400px;
+        }
+    </style>
+    <script>
+        function password1(var1){
+            console.log(var1);
+
+            var id3 = document.getElementById('id3');
+
+
+            if(id1.value == id2.value){
+                console.log('비밀번호 일치');
+                id3.style.color = 'green';
+                id3.innerHTML = '비밀번호 일치'
+            }else{
+                console.log('비밀번호 불일치');
+                id3.style.color = 'red';
+                id3.innerHTML = '비밀번호 불일치'
+            }
+        }
+    </script>
+</head>
+<body>
+    비밀번호 :
+    <input type="text" id="id1" ondblclick="password1(this.value)" placeholder="비밀번호를 입력하세요."><br>
+    비밀번호확인 :
+    <input type="text" id="id2" onkeyup="password1(this.value)" placeholder="비밀번호를 한번 더 입력하세요"><br>
+    <p id="id3">비밀번호 확인기능 구현</p>
+</body>
+</html>
